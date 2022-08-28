@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-import module as mod 
 
-res = md.add(1,2)
-print(res)
+if__name__ == "__main__":
+	""print sum of 1 and 2.""
+	from add_0 import add
+
+	a = 1
+	b = 2
+	print("{} + {} = {}".format(a, b, add(a, b)))
