@@ -1,9 +1,13 @@
-afe_print_division(a, b):
-    div = 0
-    try:
-        div = a/b
-        return div
-    except ZeroDivisionError:
-        div = None
-    finally:
-        print("Inside result: {}".format(div))
+#!/usr/bin/python3
+def safe_print_list_integers(my_list=[], x=0):
+    idx = 0
+    for i in range(x):
+        try:
+            print("{:d}".format(my_list[i]), end="")
+            idx += 1
+
+        except (ValueError, TypeError):
+            continue
+
+    print()
+    return idx
